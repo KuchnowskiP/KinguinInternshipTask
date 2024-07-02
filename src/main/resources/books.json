@@ -1,0 +1,34 @@
+[
+  {
+    "id": "1",
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "publisher": "Scribner",
+    "genre": "Classic Fiction",
+    "isbn": "9780743273565"
+  },
+  {
+    "id": "2",
+    "title": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "publisher": "J.B. Lippincott & Co.",
+    "genre": "Classic Fiction",
+    "isbn": "9780061120084"
+  },
+  {
+    "id": "3",
+    "title": "1984",
+    "author": "George Orwell",
+    "publisher": "Secker & Warburg",
+    "genre": "Dystopian Fiction",
+    "isbn": "9780451524935"
+  },
+  {
+    "id": "4",
+    "title": "The Catcher in the Rye",
+    "author": "J.D. Salinger",
+    "publisher": "Little, Brown and Company",
+    "genre": "Coming-of-age Fiction",
+    "isbn": "9780316769488"
+  }
+]
