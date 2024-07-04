@@ -4,9 +4,14 @@ This Spring Boot application is designed as part of the Kinguin internship progr
 ## Table of Contents
 - [Features](#features)
 - [Technologies Used](#technologies-used)
+- [API Endpoints](#api-endpoints)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
-  - [Running the Application](#running-the-application)
+  - [Installation](#installation)
+  - [Usage](#usage)
+- [Example API Requests](#example-api-requests)
+- [Example API Responses](#example-api-responses)
+- [Code formatting](#code-formatting)
 
 
 ## Features
