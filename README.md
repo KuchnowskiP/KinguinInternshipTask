@@ -25,6 +25,7 @@ This Spring Boot application is designed as part of the Kinguin internship progr
 - Java
 - Spring Boot
 - MongoDB
+ - **Note**: Settings for MongoDB are located in the application.properties file. You can change the database name, host, port, and other settings as needed.
 - Gradle
 
 ## API Endpoints
@@ -56,7 +57,7 @@ This Spring Boot application is designed as part of the Kinguin internship progr
 
 ### Prerequisites
 - JDK 11 or later
-- MongoDB running on the default port (27017)
+- MongoDB (for storing data)
 - Gradle (for building the project)
 
 ### Installation
