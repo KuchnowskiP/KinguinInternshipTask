@@ -104,7 +104,7 @@ If you want to search for the same book, for example, by title only, you can use
 curl -X GET "http://localhost:8080/api/v1/books/search?title=The%20Great%20Gatsby" -H "accept: application/json"
 ```
 
-Omitting any parameter will return all books in the database.
+Omitting all parameters will return all books in the database.
 
 ### POST example: Add a new book
 ```sh
