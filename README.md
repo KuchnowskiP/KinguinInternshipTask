@@ -158,8 +158,8 @@ Please replace `{id}` with the ID of the book you want to delete.
 {
   "timestamp": "2021-05-29T14:00:00.000+00:00",
   "status": 400,
-  "error": "Not Found",
-  "message": "Book not found",
+  "error": "Bad Request",
+  "message": "Book with id 60b1b3b3b3b3b3b3b3b3b3b3 does not exist",
   "path": "/api/v1/books/60b1b3b3b3b3b3b3b3b3b3b3"
 }
 ```
