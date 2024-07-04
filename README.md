@@ -134,20 +134,44 @@ Please replace `{id}` with the ID of the book you want to delete.
 ```json
 [
   {
-    "id": "60b1b3b3b3b3b3b3b3b3b3b3",
+    "id": "1",
     "title": "The Great Gatsby",
     "author": "F. Scott Fitzgerald",
     "publisher": "Scribner",
     "genre": "Classic Fiction",
-    "isbn": "9780743273565"
+    "isbn": "9780743273565",
+    "totalCopies": 5,
+    "availableCopies": 5
   },
   {
-    "id": "60b1b3b3b3b3b3b3b3b3b3b",
+    "id": "2",
     "title": "To Kill a Mockingbird",
     "author": "Harper Lee",
     "publisher": "J.B. Lippincott & Co.",
     "genre": "Classic Fiction",
-    "isbn": "9780061120084"
+    "isbn": "9780061120084",
+    "totalCopies": 5,
+    "availableCopies": 4
+  },
+  {
+    "id": "3",
+    "title": "1984",
+    "author": "George Orwell",
+    "publisher": "Secker & Warburg",
+    "genre": "Dystopian Fiction",
+    "isbn": "9780451524935",
+    "totalCopies": 5,
+    "availableCopies": 5
+  },
+  {
+    "id": "4",
+    "title": "The Catcher in the Rye",
+    "author": "J.D. Salinger",
+    "publisher": "Little, Brown and Company",
+    "genre": "Coming-of-age Fiction",
+    "isbn": "9780316769488",
+    "totalCopies": 5,
+    "availableCopies": 5
   }
 ]
 ```
