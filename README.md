@@ -157,7 +157,7 @@ Please replace `{id}` with the ID of the book you want to delete.
 ```json
 {
   "timestamp": "2021-05-29T14:00:00.000+00:00",
-  "status": 404,
+  "status": 400,
   "error": "Not Found",
   "message": "Book not found",
   "path": "/api/v1/books/60b1b3b3b3b3b3b3b3b3b3b3"
