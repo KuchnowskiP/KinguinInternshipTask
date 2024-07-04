@@ -5,7 +5,9 @@
     "author": "F. Scott Fitzgerald",
     "publisher": "Scribner",
     "genre": "Classic Fiction",
-    "isbn": "9780743273565"
+    "isbn": "9780743273565",
+    "totalCopies": 5,
+    "availableCopies": 5
   },
   {
     "id": "2",
@@ -13,7 +15,9 @@
     "author": "Harper Lee",
     "publisher": "J.B. Lippincott & Co.",
     "genre": "Classic Fiction",
-    "isbn": "9780061120084"
+    "isbn": "9780061120084",
+    "totalCopies": 5,
+    "availableCopies": 4
   },
   {
     "id": "3",
@@ -21,7 +25,9 @@
     "author": "George Orwell",
     "publisher": "Secker & Warburg",
     "genre": "Dystopian Fiction",
-    "isbn": "9780451524935"
+    "isbn": "9780451524935",
+    "totalCopies": 5,
+    "availableCopies": 5
   },
   {
     "id": "4",
@@ -29,6 +35,8 @@
     "author": "J.D. Salinger",
     "publisher": "Little, Brown and Company",
     "genre": "Coming-of-age Fiction",
-    "isbn": "9780316769488"
+    "isbn": "9780316769488",
+    "totalCopies": 5,
+    "availableCopies": 5
   }
 ]

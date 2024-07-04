@@ -1,20 +1,23 @@
 [
   {
-    "bookId": "1",
-    "customerId": "1",
+    "id": "1",
     "loanDate": "2023-06-15",
-    "returnDate": "2023-07-05"
+    "returnDate": "2023-07-05",
+    "bookId" : "1",
+    "customerId" : "1"
   },
   {
-    "bookId": "2",
-    "customerId": "2",
+    "id": "2",
     "loanDate": "2023-05-20",
-    "returnDate": null
+    "returnDate": null,
+    "bookId": "2",
+    "customerId": "2"
   },
   {
-    "bookId": "3",
-    "customerId": "3",
+    "id": "3",
     "loanDate": "2023-04-10",
-    "returnDate": "2023-04-30"
+    "returnDate": "2023-04-30",
+    "bookId": "3",
+    "customerId": "3"
   }
 ]

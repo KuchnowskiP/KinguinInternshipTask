@@ -5,10 +5,13 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document("books")
 public record Book (
-        @Id String id,
+        @Id
+        String id,
         String title,
         String author,
         String publisher,
         String genre,
-        String isbn
+        String isbn,
+        Integer totalCopies,
+        Integer availableCopies
 ) {}

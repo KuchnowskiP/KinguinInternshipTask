@@ -9,5 +9,9 @@ public record Loan(
         String bookId,
         String customerId,
         String loanDate,
-        String returnDate
-) {}
+        String returnDate) {
+
+    public boolean isReturned() {
+        return returnDate != null;
+    }
+}

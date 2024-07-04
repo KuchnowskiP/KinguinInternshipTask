@@ -5,7 +5,8 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document("customers")
 public record Customer(
-        @Id String id,
+        @Id
+        String id,
         String firstName,
         String lastName,
         String libraryCardNumber
