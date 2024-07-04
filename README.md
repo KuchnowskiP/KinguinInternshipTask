@@ -18,8 +18,8 @@ This Spring Boot application is designed as part of the Kinguin internship progr
 - **Loan Management**: Users can loan or return books using a simple interface.
 - **Customer and Book Details**: Detailed information about customers and books is maintained and can be accessed as needed.
 - **Loan Tracking**: Keeps track of all loans, including the customer and book details associated with each loan.
-- **DataLoader**: The application uses a DataLoader class to populate the database with sample data located in the resources folder. . The DataLoader class is executed automatically when the application starts. If you want to disable this feature, you can change the app.dataloader.enable property in the application.properties file to false.
 - **Swagger UI**: The application provides a Swagger UI for easy access to the API documentation. The Swagger UI is available at `http://localhost:8080/swagger-ui.html`.
+- **DataLoader**: The application uses a DataLoader class to populate the database with sample data located in the resources folder. The DataLoader class is executed automatically when the application starts. If you want to disable this feature, you can change the app.dataloader.enable property in the application.properties file to false.
 
 ## Technologies Used
 - Java
