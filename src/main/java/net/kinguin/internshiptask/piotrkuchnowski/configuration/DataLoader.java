@@ -10,6 +10,7 @@ import net.kinguin.internshiptask.piotrkuchnowski.repository.CustomerRepository;
 import net.kinguin.internshiptask.piotrkuchnowski.repository.LoanRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Component;
 import org.springframework.util.ResourceUtils;
 
@@ -18,6 +19,7 @@ import java.io.IOException;
 import java.util.List;
 
 @Component
+@ConditionalOnProperty(name = "app.dataloader.enable", havingValue = "true")
 public class DataLoader implements CommandLineRunner {
     private final BookRepository bookRepository;
     private final CustomerRepository customerRepository;
