@@ -21,6 +21,7 @@ This Spring Boot application is designed as part of the Kinguin internship progr
 - Gradle
 
 ## API Endpoints
+**Disclaimer**: I've used only ID for identifying resources, as it is the most common practice. I've provided search endpoints for books and customers to make it easier to find resources by different parameters. I thought it would be useful for the frontend to have such functionality. Then, after finding the desired resource, the frontend can use the ID to perform further operations.
 ### Books
 - **GET /books**: Get all books.
 - **GET /books/{id}**: Get a book by ID.
@@ -118,5 +119,42 @@ curl -X DELETE "http://localhost:8080/api/v1/books/{id}" -H "accept: */*"
 
 Please replace `{id}` with the ID of the book you want to delete.
 
-**Note**: The same structure can be used for customers and loans endpoints.
 **Note**: If you desire more examples, please refer to the Swagger UI documentation available at `http://localhost:8080/swagger-ui.html`.
+
+## Example API Responses
+### Success Response for GET all books
+```json
+[
+  {
+    "id": "60b1b3b3b3b3b3b3b3b3b3b3",
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "publisher": "Scribner",
+    "genre": "Classic Fiction",
+    "isbn": "9780743273565"
+  },
+  {
+    "id": "60b1b3b3b3b3b3b3b3b3b3b",
+    "title": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "publisher": "J.B. Lippincott & Co.",
+    "genre": "Classic Fiction",
+    "isbn": "9780061120084"
+  }
+]
+```
+
+
+### Error Response for GET book by ID
+```json
+{
+  "timestamp": "2021-05-29T14:00:00.000+00:00",
+  "status": 404,
+  "error": "Not Found",
+  "message": "Book not found",
+  "path": "/api/v1/books/60b1b3b3b3b3b3b3b3b3b3b3"
+}
+```
+
+## Code formatting
+The project uses the Google Java Style Guide for code formatting.

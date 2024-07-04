@@ -5,6 +5,7 @@ import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import net.kinguin.internshiptask.piotrkuchnowski.model.dto.LoanDTO;
+import net.kinguin.internshiptask.piotrkuchnowski.response.ApiErrorResponse;
 import net.kinguin.internshiptask.piotrkuchnowski.service.LoanService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -61,7 +62,10 @@ public class LoanController {
                     @ApiResponse(
                             description = "Customer or book with the given ID does not exist",
                             responseCode = "400",
-                            content = @Content)
+                            content = @Content(
+                                    mediaType = "application/json",
+                                    schema = @Schema(implementation = ApiErrorResponse.class)
+                            ))
             })
     @PostMapping
     public ResponseEntity<LoanDTO> loanOrReturnBook(String customerId, String bookId) {
@@ -83,7 +87,14 @@ public class LoanController {
                     @ApiResponse(
                             description = "No loans made by the customer found",
                             responseCode = "204",
-                            content = @Content)
+                            content = @Content),
+                    @ApiResponse(
+                            description = "Customer with the given ID does not exist",
+                            responseCode = "400",
+                            content = @Content(
+                                    mediaType = "application/json",
+                                    schema = @Schema(implementation = ApiErrorResponse.class)
+                            ))
             })
     @GetMapping("/customer/{customerId}")
     public ResponseEntity<List<LoanDTO>> allLoansMadeByCustomer(@PathVariable String customerId) {
@@ -105,7 +116,14 @@ public class LoanController {
                     @ApiResponse(
                             description = "No loans not returned by the customer found",
                             responseCode = "204",
-                            content = @Content)
+                            content = @Content),
+                    @ApiResponse(
+                            description = "Customer with the given ID does not exist",
+                            responseCode = "400",
+                            content = @Content(
+                                    mediaType = "application/json",
+                                    schema = @Schema(implementation = ApiErrorResponse.class)
+                            ))
             })
     @GetMapping("/customer/{customerId}/active")
     public ResponseEntity<List<LoanDTO>> allLoansNotReturned(@PathVariable String customerId) {
@@ -127,7 +145,14 @@ public class LoanController {
                     @ApiResponse(
                             description = "No loans returned by the customer found",
                             responseCode = "204",
-                            content = @Content)
+                            content = @Content),
+                    @ApiResponse(
+                            description = "Customer with the given ID does not exist",
+                            responseCode = "400",
+                            content = @Content(
+                                    mediaType = "application/json",
+                                    schema = @Schema(implementation = ApiErrorResponse.class)
+                            ))
             })
     @GetMapping("/customer/{customerId}/returned")
     public ResponseEntity<List<LoanDTO>> allLoansReturned(@PathVariable String customerId) {

@@ -6,6 +6,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import net.kinguin.internshiptask.piotrkuchnowski.model.Book;
 import net.kinguin.internshiptask.piotrkuchnowski.model.dto.BookDTO;
+import net.kinguin.internshiptask.piotrkuchnowski.response.ApiErrorResponse;
 import net.kinguin.internshiptask.piotrkuchnowski.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -53,7 +54,10 @@ public class BookController {
                                 @Content(
                                         mediaType = "application/json",
                                         schema = @Schema(implementation = Book.class))),
-                @ApiResponse(description = "Book with given id does not exist", responseCode = "400", content = @Content)
+                @ApiResponse(description = "Book with given id does not exist", responseCode = "400", content = @Content(
+                        mediaType = "application/json",
+                        schema = @Schema(implementation = ApiErrorResponse.class)
+                ))
             })
     @GetMapping("/{id}")
     public ResponseEntity<Book> getBookById(@PathVariable String id) {
@@ -72,7 +76,10 @@ public class BookController {
                                 @Content(
                                         mediaType = "application/json",
                                         schema = @Schema(implementation = Book.class))),
-                @ApiResponse(description = "Book with given isbn already exists", responseCode = "400", content = @Content)
+                @ApiResponse(description = "Book with given isbn already exists", responseCode = "400", content = @Content(
+                        mediaType = "application/json",
+                        schema = @Schema(implementation = ApiErrorResponse.class)
+                ))
             })
     @PostMapping
     public ResponseEntity<Book> createBook(@RequestBody BookDTO book) {
@@ -91,7 +98,10 @@ public class BookController {
                                 @Content(
                                         mediaType = "application/json",
                                         schema = @Schema(implementation = Book.class))),
-                @ApiResponse(description = "Book with given id does not exist", responseCode = "400", content = @Content)
+                @ApiResponse(description = "Book with given id does not exist", responseCode = "400", content = @Content(
+                        mediaType = "application/json",
+                        schema = @Schema(implementation = ApiErrorResponse.class)
+                ))
             })
     @PutMapping("/{id}")
     public ResponseEntity<Book> updateBook(@PathVariable String id, @RequestBody BookDTO book) {
@@ -104,7 +114,10 @@ public class BookController {
             description = "Deletes book",
             responses = {
                 @ApiResponse(description = "Book deleted", responseCode = "200"),
-                @ApiResponse(description = "Book with given id does not exist", responseCode = "400", content = @Content)
+                @ApiResponse(description = "Book with given id does not exist", responseCode = "400", content = @Content(
+                        mediaType = "application/json",
+                        schema = @Schema(implementation = ApiErrorResponse.class)
+                ))
             })
     @DeleteMapping("/{id}")
     public void deleteBook(@PathVariable String id) {

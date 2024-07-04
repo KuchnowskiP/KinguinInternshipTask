@@ -6,6 +6,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import net.kinguin.internshiptask.piotrkuchnowski.model.Customer;
 import net.kinguin.internshiptask.piotrkuchnowski.model.dto.CustomerDTO;
+import net.kinguin.internshiptask.piotrkuchnowski.response.ApiErrorResponse;
 import net.kinguin.internshiptask.piotrkuchnowski.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -34,7 +35,10 @@ public class CustomerController {
                                 @Content(
                                         mediaType = "application/json",
                                         schema = @Schema(implementation = Customer.class))),
-                @ApiResponse(description = "No customers found", responseCode = "204", content = @Content)
+                @ApiResponse(
+                        description = "No customers found",
+                        responseCode = "204",
+                        content = @Content)
             })
     @GetMapping
     public ResponseEntity<List<Customer>> getAllCustomers() {
@@ -57,7 +61,11 @@ public class CustomerController {
                                         schema = @Schema(implementation = Customer.class))),
                 @ApiResponse(
                         description = "Customer with given id does not exist",
-                        responseCode = "400", content = @Content)
+                        responseCode = "400",
+                        content =
+                                @Content(
+                                        mediaType = "application/json",
+                                        schema = @Schema(implementation = ApiErrorResponse.class)))
             })
     @GetMapping("/{id}")
     public ResponseEntity<Customer> getCustomerById(@PathVariable String id) {
@@ -78,7 +86,11 @@ public class CustomerController {
                                         schema = @Schema(implementation = Customer.class))),
                 @ApiResponse(
                         description = "Customer with given library card number already exists",
-                        responseCode = "400", content = @Content)
+                        responseCode = "400",
+                        content =
+                                @Content(
+                                        mediaType = "application/json",
+                                        schema = @Schema(implementation = ApiErrorResponse.class)))
             })
     @PostMapping
     public ResponseEntity<Customer> createCustomer(@RequestBody CustomerDTO customer) {
@@ -99,7 +111,11 @@ public class CustomerController {
                                         schema = @Schema(implementation = Customer.class))),
                 @ApiResponse(
                         description = "Customer with given id does not exist",
-                        responseCode = "400", content = @Content)
+                        responseCode = "400",
+                        content =
+                                @Content(
+                                        mediaType = "application/json",
+                                        schema = @Schema(implementation = ApiErrorResponse.class)))
             })
     @PutMapping("/{id}")
     public ResponseEntity<Customer> updateCustomer(
@@ -113,7 +129,13 @@ public class CustomerController {
             description = "Deletes customer",
             responses = {
                 @ApiResponse(description = "Customer deleted", responseCode = "200"),
-                @ApiResponse(description = "Customer with given id does not exist", responseCode = "400", content = @Content)
+                @ApiResponse(
+                        description = "Customer with given id does not exist",
+                        responseCode = "400",
+                        content =
+                                @Content(
+                                        mediaType = "application/json",
+                                        schema = @Schema(implementation = ApiErrorResponse.class)))
             })
     @DeleteMapping("/{id}")
     public void deleteCustomer(@PathVariable String id) {
@@ -131,7 +153,10 @@ public class CustomerController {
                                 @Content(
                                         mediaType = "application/json",
                                         schema = @Schema(implementation = Customer.class))),
-                @ApiResponse(description = "No customers found, based on provided parameters", responseCode = "204", content = @Content)
+                @ApiResponse(
+                        description = "No customers found, based on provided parameters",
+                        responseCode = "204",
+                        content = @Content)
             })
     @GetMapping("/search")
     public ResponseEntity<List<Customer>> searchCustomers(
