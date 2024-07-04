@@ -127,7 +127,7 @@ curl -X DELETE "http://localhost:8080/api/v1/books/{id}" -H "accept: */*"
 
 Please replace `{id}` with the ID of the book you want to delete.
 
-**Note**: If you desire more examples, please refer to the Swagger UI documentation available at `http://localhost:8080/swagger-ui.html`.
+**Note**: If you would like to see more examples, please refer to the Swagger UI documentation available at `http://localhost:8080/swagger-ui.html`.
 
 ## Example API Responses
 ### Success Response for GET all books
